@@ -23,7 +23,7 @@ const anime=()=>{
 
   const animeTest=document.querySelector('h1')
 
-  animeTest.style.color="red";
+  animeTest.style.color="yellow";
 }
 const anime2=()=>{
   const animeTest=document.querySelector('h1')
@@ -141,7 +141,7 @@ console.log(res[0].ausbildung)
   ]} >
     <div className="App">
 
- <img src={Bild} className="br-100 ba h4 w4 dib"/>
+ <img src={Bild} className="br-100 ba h6 w10 dib"/>
 
     </div>
 
@@ -153,15 +153,22 @@ console.log(res[0].ausbildung)
 
 
     </header>
+    <hr />
 
+<div>
+
+<h2 className="d-flex text-content-center">Meine Fähigkeiten</h2>
+
+
+</div>
     <div className="App">
 
 
-{meine_Daten.map(({id,skills,imageUrl,rate,click2})=>(
+{meine_Daten.map(({id,skills,imageUrl,click2})=>(
 
 
-<Card className="cardTest" style={{ width: '18rem',background:"aqua",margin:"10px" }}>
-<Card.Img variant="top" src={imageUrl} style={{width:"200px",height:"200px"}} />
+<Card className="justify-content-md-center cardTest" style={{ width: '18rem',background:"aqua",margin:"10px" }}>
+<Card.Img className="justify-content-md-center" variant="top" src={imageUrl}  style={{ width: '18rem',height:"18rem" } } />
 <Card.Body>
   <Card.Title>{skills}</Card.Title>
   {meine_Daten.map(({rate})=>(
@@ -170,19 +177,8 @@ console.log(res[0].ausbildung)
 
 </div>
 
-  ))}
-
-
-
-
-
- 
-
- 
-
-{/* Kenntnis:{rate} */}
-</Card.Body>
-<Button variant="primary" onClick={click2}>Hallo </Button>
+  ))}</Card.Body>
+<Button className="btn"  variant="primary" onClick={click2}>Bewertung der Fähigkeiten</Button>
 </Card>
 
 
@@ -206,26 +202,30 @@ console.log(res[0].ausbildung)
   
 <hr />
 <div className="suche">
-<h1>Mehr über Mich hier Suchen 😁
+<h2>Mehr über Mich hier Suchen 😁
 
-<p>hier ist eine micro API, über mich gespeichert einfach, die Schlagwörter wie Name,Alter,Beruf,Hobby etc. suchen </p>
+<p>hier ist eine micro API, über mich gespeichert einfach, die Schlagwörter 
+  wie Name,Alter,Beruf,Hobby,Ausbildung etc. 
+  suchen,und mit Enter bestätigen </p>
 
-</h1>
-<div  className="suchefunc br-pill h4 w4 dib">
-
-<input className="suchefunc br-pill h2.5 w5 dib" type="text" onKeyDown={suche} />
-
-</div>
-
-
-
-</div>
-<div>
+</h2>
 
 <h2 className="test2"></h2>
 
 
 </div>
+
+<div>
+
+
+<input className="suchefunc br-pill h2.5 w5 dib" type="text" onKeyDown={suche} placeholder={"suchen... Eingabe(enter) dürcken"} />
+
+</div>
+
+
+
+
+
 
 
 {/* Routes */}

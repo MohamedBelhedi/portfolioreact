@@ -52,7 +52,7 @@
 
 .cardTest{
 
-  opacity:0;
+  /* opacity:0; */
 
 
 
@@ -60,15 +60,29 @@
 
 
 .cardTest:hover{
-
+border-radius: 20px;
 opacity:1;
-transition: 1.5s;
+transition:all 1s ease-in-out;
+transform: translateY(-100px);
+
 
 }
 .suchefunc{
 
-  margin-right: 120px;
+  margin-left: 20%;
   border-radius: 300px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
+
+}
+.btn{
+  position:absolute;
+  margin-top: 400px;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: center;
+  
 
 }
