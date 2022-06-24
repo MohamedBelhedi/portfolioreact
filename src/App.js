@@ -89,6 +89,12 @@ console.log(res[0].Beruf)
 test2.innerHTML=res[0].hobby
 console.log(res[0].hobby)
  }
+ if(input.includes("ausbildung"))
+ {
+  const test2=document.querySelector('.test2')
+test2.innerHTML=res[0].ausbildung
+console.log(res[0].ausbildung)
+ }
 }else if(input!="name"){
   let test2=document.querySelector('.test2')
   
@@ -158,13 +164,22 @@ console.log(res[0].hobby)
 <Card.Img variant="top" src={imageUrl} style={{width:"200px",height:"200px"}} />
 <Card.Body>
   <Card.Title>{skills}</Card.Title>
-  <Card.Text>
-    Some quick example text to build on the card title and make up the bulk of
-    the card's content.
-  </Card.Text>
-  <div className="rate" key={rate}>
-{rate}
-  </div>
+  {meine_Daten.map(({rate})=>(
+
+<div className="rate" value={rate}>
+
+</div>
+
+  ))}
+
+
+
+
+
+ 
+
+ 
+
 {/* Kenntnis:{rate} */}
 </Card.Body>
 <Button variant="primary" onClick={click2}>Hallo </Button>
