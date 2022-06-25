@@ -56,7 +56,28 @@ transition:2s;
   
 
 }
+input{
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+ 
 
+}
+.bildApi{
+  text-align: center;
+  flex-wrap: wrap;
+  min-height: 40vh;
+  margin:10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+
+}
 .cardTest:hover{
 border-radius: 20px;
 opacity:1;
@@ -86,10 +107,47 @@ transform: translateY(-100px);
 }
 p{
 
-font-size: 20px;
+font-size: 22px;
 text-align: center;
 display: flex;
 flex-wrap: wrap;
 margin:10px;
+justify-content:center;
+
+
+
+}
+@media screen and (max-width:450px) {
+  p,h2.test2{
+
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin:10px;
+    justify-content:center;
+    
+    
+    
+    }
+    input{
+      text-align: center;
+      flex-wrap: wrap;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      left:0;
+      right:0;
+     
+    
+    }
+  
+}
+.b{
+
+transition:all 2s ease-in-out;
+font-weight: 900;
+
 
 }

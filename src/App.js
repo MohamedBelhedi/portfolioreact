@@ -5,7 +5,7 @@ import 'animate.css';
 import {Button,Card,Navbar} from 'react-bootstrap'
 import { Routes,Route } from 'react-router-dom';
 import Bild from './bewerbung.jpg'
-import momo from './momo.json'
+import 'react-bootstrap'
 
 
 
@@ -15,6 +15,8 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import ReactAnime from 'react-animejs'
 import meine_Daten from './daten/daten';
 import Whatsapp from './components/whatsapp';
+import { createElement } from 'react';
+import { momo } from './momo';
 
 // eine Such Leiste wo der user nach mein Name und meine Alter etc das als JSON datei und mit fetch un then aufrufen
 const {Anime, stagger} = ReactAnime
@@ -81,7 +83,7 @@ console.log(res[0].name)
  {
   const test2=document.querySelector('.test2')
 test2.innerHTML=res[0].alter
-test2.style.transition="2s"
+test2.style.transition="all 2s ease-in-out"
 test2.style.color="yellow"
 
 console.log(res[0].alter)
@@ -90,7 +92,7 @@ console.log(res[0].alter)
  {
   const test2=document.querySelector('.test2')
 test2.innerHTML=res[0].Beruf
-test2.style.transition="2s"
+test2.style.transition="all 2s ease-in-out"
 test2.style.color="yellow"
 console.log(res[0].Beruf)
  }
@@ -98,25 +100,51 @@ console.log(res[0].Beruf)
  {
   const test2=document.querySelector('.test2')
 test2.innerHTML=res[0].hobby
-test2.style.transition="2s"
+test2.style.transition="all 2s ease-in-out"
 test2.style.color="yellow"
 console.log(res[0].hobby)
+const bildApi=document.querySelector('.bildApi')
+const pic = document.createElement("IMG");
+pic.setAttribute("src",res[0].image);
+pic.setAttribute("width", "500");
+pic.setAttribute("height", "600");
+
+bildApi.appendChild(pic);
+
  }
  if(input.includes("ausbildung"))
  {
   const test2=document.querySelector('.test2')
-  test2.style.transition="2s"
+  test2.style.transition="all 2s ease-in-out"
 test2.style.color="yellow"
 test2.innerHTML=res[0].ausbildung
 
 console.log(res[0].ausbildung)
  }
-}else if(input!="name"){
+ if(input.includes("alltag"))
+ {
+  const test2=document.querySelector('.test2')
+  test2.style.transition="all 2s ease-in-out"
+test2.style.color="yellow"
+test2.innerHTML="das ist Mein Alltag"
+
+console.log(res[0].image)
+const bildApi=document.querySelector('.bildApi')
+const pic = document.createElement("IMG");
+pic.setAttribute("src",res[0].image);
+pic.setAttribute("width", "500");
+pic.setAttribute("height", "600");
+
+bildApi.appendChild(pic);
+
+
+ }
+}else if(input!=="name"){
   let test2=document.querySelector('.test2')
   
   
       test2.innerHTML="leider nicht vorhanden"
-      test2.style.transition="2s"
+      test2.style.transition="all 2s ease-in-out"
       test2.style.color="white"
     
     }
@@ -130,23 +158,24 @@ console.log(res[0].ausbildung)
 
 }
 
-const onWort=()=>{
+// versucht ein wort über js zu suchen 
+// const onWort=()=>{
 
-  const wort1=document.querySelector('p')
- const wort1_ex=wort1.map("Name")
+//   const wort1=document.querySelector('p')
+//  const wort1_ex=wort1.map("Name")
 
-  if(wort1_ex.includes(["Name"]))
-{
+//   if(wort1_ex.includes(["Name"]))
+// {
   
 
-  wort1.style.backgroundColor="red";
+//   wort1.style.backgroundColor="red";
 
 
-}
+// }
 
 
 
-}
+// }
 
 
 
@@ -188,7 +217,7 @@ const onWort=()=>{
 <div>
 
 
-<h2 className="d-flex text-content-center">Meine Fähigkeiten</h2>
+<h2 className="text-center">Meine Fähigkeiten</h2>
 
 
 </div>
@@ -240,9 +269,19 @@ const onWort=()=>{
 <div className="suche">
 <h2>Mehr über Mich hier Suchen 😁
 
-<p onMouseEnter={onWort}>hier ist eine micro API über mich gespeichert einfach, die Schlagwörter 
-  wie Name,Alter,Beruf,Hobby,Ausbildung etc. 
+<p 
+
+// onMouseEnter={onWort}
+
+>hier ist eine micro API über mich gespeichert einfach, die Schlagwörter 
+  wie <b>Name,Alter,Beruf,Hobby,Ausbildung,Alltag</b> etc. 
   suchen,und mit Enter bestätigen </p>
+  <div>
+
+
+<input className="suchefunc br-pill h2.5 w5 dib" type="text" onKeyDown={suche} placeholder={"suchen... Eingabe(enter) dürcken"} />
+
+</div>
 
 </h2>
 
@@ -251,19 +290,12 @@ const onWort=()=>{
 
 
 </div>
+<div className="bildApi"></div>
 
 
-<div>
 
-
-<input className="suchefunc br-pill h2.5 w5 dib" type="text" onKeyDown={suche} placeholder={"suchen... Eingabe(enter) dürcken"} />
-
-</div>
 </AnimationOnScroll>
-<AnimationOnScroll animateIn="animate__backInDown">
 <Whatsapp/>
-</AnimationOnScroll>
-
 
 
 
