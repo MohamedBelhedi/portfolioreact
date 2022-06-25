@@ -8,9 +8,10 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  /* flex-direction: row;
-  margin:15px;
-  display:flex; */
+  /* justify-content: space-around; */
+
+  display:flex;
+  margin:10px
   
   
 }
@@ -50,14 +51,11 @@
   }
 }
 
-.cardTest{
-
-  /* opacity:0; */
-
-
+.test::after{
+transition:2s;
+  
 
 }
-
 
 .cardTest:hover{
 border-radius: 20px;
@@ -84,5 +82,14 @@ transform: translateY(-100px);
   align-items: center;
   justify-content: center;
   
+
+}
+p{
+
+font-size: 20px;
+text-align: center;
+display: flex;
+flex-wrap: wrap;
+margin:10px;
 
 }
