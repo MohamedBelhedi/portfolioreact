@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  /* font-family: Smooch; */
   /* justify-content: space-around; */
 
   display:flex;
@@ -88,7 +89,7 @@ transform: translateY(-100px);
 }
 .suchefunc{
 
-  margin-left: 20%;
+  margin-left: 0%;
   border-radius: 300px;
   flex-direction: row;
   align-items: center;

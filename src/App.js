@@ -1,8 +1,9 @@
 
 import './App.css';
+import GoogleFontLoader from 'react-google-font'
 
 import 'animate.css';
-import {Button,Card,Navbar} from 'react-bootstrap'
+import {Button,ButtonToolbar,Card,Navbar} from 'react-bootstrap'
 import { Routes,Route } from 'react-router-dom';
 import Bild from './bewerbung.jpg'
 import 'react-bootstrap'
@@ -64,6 +65,7 @@ const suche=async(e)=>{
  await Promise.resolve(momo)
 .then(res=>{
   const input=document.querySelector('input').value
+  input.toLocaleLowerCase()
 
  
 
@@ -131,11 +133,23 @@ test2.innerHTML="das ist Mein Alltag"
 console.log(res[0].image)
 const bildApi=document.querySelector('.bildApi')
 const pic = document.createElement("IMG");
+const button=document.createElement("button")
+const text=document.createTextNode("x")
 pic.setAttribute("src",res[0].image);
 pic.setAttribute("width", "500");
 pic.setAttribute("height", "600");
 
 bildApi.appendChild(pic);
+button.appendChild(text)
+button.setAttribute("class","btn btn-primary")
+bildApi.appendChild(button);
+
+button.addEventListener("click",()=>{
+
+bildApi.remove();
+
+
+})
 
 
  }
@@ -233,13 +247,8 @@ bildApi.appendChild(pic);
 <Card.Img className="justify-content-md-center" variant="top" src={imageUrl}  style={{ width: '18rem',height:"18rem" } } />
 <Card.Body>
   <Card.Title>{skills}</Card.Title>
-  {meine_Daten.map(({rate})=>(
-
-<div className="rate" value={rate}>
-
-</div>
-
-  ))}</Card.Body>
+  {/* {meine_Daten.map(({rate})=>(<div className="rate" value={rate}></div>))} */}
+  </Card.Body>
 <Button className="btn"  variant="primary" onClick={click2}>Bewertung der Fähigkeiten</Button>
 </Card>
 

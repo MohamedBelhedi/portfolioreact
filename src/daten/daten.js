@@ -88,7 +88,7 @@ const meine_Daten=[
     },
     {
       id:5,
-      skills:"Data Science/ML Pyhton",
+      skills:"Data Science/ML Python",
       imageUrl:"https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?cs=srgb&dl=pexels-pixabay-265087.jpg&fm=jpg",
       rate:"⭐⭐⭐",   
       click2(){
