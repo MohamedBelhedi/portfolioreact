@@ -116,7 +116,7 @@ const meine_Daten=[
         
         Swal.fire({
           title:meine_Daten[5].skills+"<h4> Meine Kenntnisse von 5 Sternen</h4>"+meine_Daten[5].rate+"<h4>hier kann man die Deime meines Spieles testen</h4>",
-          text:"Meine Kenntnisse von 5 Sternen"+meine_Daten[5].rate+"hier kann man die Deime meines Spieles testen",
+          text:"Meine Kenntnisse von 5 Sternen"+meine_Daten[5].rate,
           html:'<a href="https://mohamedbelhedi.github.io/fahrschultestspiel2/spiel.html">zum Spiel</a>',
         
 

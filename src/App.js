@@ -65,7 +65,7 @@ const suche=async(e)=>{
  await Promise.resolve(momo)
 .then(res=>{
   const input=document.querySelector('input').value
-  input.toLocaleLowerCase()
+  input.toLowerCase()
 
  
 
@@ -172,39 +172,12 @@ bildApi.remove();
 
 }
 
-// versucht ein wort über js zu suchen 
-// const onWort=()=>{
-
-//   const wort1=document.querySelector('p')
-//  const wort1_ex=wort1.map("Name")
-
-//   if(wort1_ex.includes(["Name"]))
-// {
-  
-
-//   wort1.style.backgroundColor="red";
-
-
-// }
-
-
-
-// }
 
 
 
 
- 
-// await fetch(momo)
-// .then(res=>res.json())
-// .then(result=>{
-
-//   const jsonTest=JSON.stringify(result)
-
-//   console.log(jsonTest)
 
 
-// })
 
 
   return (
