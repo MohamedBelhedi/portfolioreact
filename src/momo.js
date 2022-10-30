@@ -9,7 +9,7 @@ export const momo=[
     "ausbildung":"Bundeswehr(Marine 73 Kraftfahrer,76 Boarding Soldat)Fachhochschulreife,Chemisch-technischer-Assistent(CTA),Fahrlehrer",
     "hobby":"Autos schrauben,Programmieren,Sport Fitness",
     "image": require("./alltag.jpg")
-    
+        
     
 
 }]

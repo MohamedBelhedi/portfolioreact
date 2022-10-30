@@ -1,12 +1,13 @@
 
 import './App.css';
-import GoogleFontLoader from 'react-google-font'
+// import GoogleFontLoader from 'react-google-font'
 
 import 'animate.css';
 import {Button,ButtonToolbar,Card,Navbar} from 'react-bootstrap'
 import { Routes,Route } from 'react-router-dom';
 import Bild from './bewerbung.jpg'
 import 'react-bootstrap'
+import cert from './ML.png'
 
 
 
@@ -26,6 +27,7 @@ function App() {
 const [btnText,setBtnText]=useState("durchsuchen")
 const [suchTxt,setSuchTxt]=useState("")
 const testText="Mein Portfolio Web App & Gamedeveloper"
+const [vis,setVis]=useState(false)
 const chngBtnText=()=>{
 
 setBtnText("suchen....")
@@ -375,10 +377,33 @@ else if(input.length===0){
     </div>
  </AnimationOnScroll>
 
+<hr/>
 
-  
-<hr />
+
+
+
 <AnimationOnScroll animateIn="animate__backInDown">
+{vis?
+
+<div className='container'>
+
+
+
+
+<div  className='row justify-items-center center col-lg-12'>
+
+<img src={cert} />
+
+</div>
+
+ </div>: <><div>  <button className="btn btn-primary" onClick={()=>{setVis(true)}}>Zertifikate</button></div>
+
+ </>
+ 
+
+ } 
+
+
 <div className="suche">
 <h2>Mehr über Mich hier Suchen 😁
 
