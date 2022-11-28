@@ -8,6 +8,7 @@ import { Routes,Route } from 'react-router-dom';
 import Bild from './bewerbung.jpg'
 import 'react-bootstrap'
 import cert from './ML.png'
+import pycert from'./Python_Cert.png'
 
 
 
@@ -392,7 +393,8 @@ else if(input.length===0){
 
 <div  className='row justify-items-center center col-lg-12'>
 
-<img src={cert} />
+<img style={{width:500,height:500}} src={cert} />
+<img style={{width:500,height:500}} src={pycert} />
 
 </div>
 
